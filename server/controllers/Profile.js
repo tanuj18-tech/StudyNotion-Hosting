@@ -6,8 +6,7 @@ const { convertSecondsToDuration } = require("../utils/secToDuration")
 const User = require("../models/User")
 // require("dotenv").config();
 const {uploadImageToCloudinary} = require("../utils/imageUploader");
-const { useId } = require("react");
- 
+  
 //user meh null pada hua hai profile meh toh create matlab 
 exports.updateProfile = async (req, res) => {
   try {
