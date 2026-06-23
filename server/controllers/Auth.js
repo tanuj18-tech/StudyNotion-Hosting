@@ -8,15 +8,14 @@ require("dotenv").config()
 
 const mailSender = require("../utils/mailSender")
 const { passwordUpdated } = require("../mail/templates/passwordUpdate");
-const { default: toast } = require("react-hot-toast");
-
+ 
 //sendOTP
 exports.sendotp = async (req,res) => {
         try{
           const {email} = req.body;
         const checkUserPresent = await User.findOne({email});
         if(checkUserPresent){
-              toast.error("User already exist with this email, please login");
+              
             return res.status(401)
                     .json({
                         success:false,
