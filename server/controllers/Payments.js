@@ -8,8 +8,7 @@ const {courseEnrollmentEmail} = require("../mail/templates/courseEnrollmentEmail
 const {paymentSuccessEmail} = require("../mail/templates/paymentSuccessEmail");
 const CourseProgress = require("../models/CourseProgress");
 const Course = require("../models/Course");
-const { useId } = require("react");
-
+ 
 exports.capturePayment = async (req, res) => {
   const {courses} = req.body;
   const userId = req.user.id;
