@@ -1,7 +1,7 @@
 const Section = require("../models/Section");
 const Course = require("../models/Course");
 const SubSection = require("../models/subSection");
-const { data } = require("react-router-dom");
+ 
 exports.createSection = async (req,res) => {
     try {
 
