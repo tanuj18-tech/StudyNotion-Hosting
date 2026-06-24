@@ -31,7 +31,11 @@ app.use(cookieParse());
 //frontend se jo call lagega usko entertain krna
 app.use(
     cors({
-        origin:"http://localhost:3000",
+        origin: [
+            "http://localhost:3000",
+            //for vercel app
+            "https://study-notion-hosting-8z6p.vercel.app",
+        ],
         credentials: true
     })
 )
